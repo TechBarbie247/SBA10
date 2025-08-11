@@ -1,13 +1,34 @@
-# React + Vite
+# Recipe Discovery App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is a React single-page application (SPA) that allows users to browse recipes by category, search for specific recipes, view detailed recipe information, and manage a personal list of favorite recipes. The app uses the free [TheMealDB API](https://www.themealdb.com/api.php) for recipe data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Key features include:
 
-## Expanding the ESLint configuration
+- Fetching and displaying recipe categories and details using React hooks (`useState`, `useEffect`).
+- Custom hooks for data fetching (`useFetch`) and local storage synchronization (`useLocalStorage`).
+- Global state management with React Context API to handle favorites.
+- Dynamic routing using React Router for home, category, recipe detail, favorites, and search pages.
+- Responsive and accessible UI with reusable components.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# SBA10
+---
+
+
+## References and Resources
+Throughout the project, I frequently consulted the official React documentation for guidance on:
+
+React Hooks API
+
+Using the Effect Hook (useEffect)
+
+Context API
+
+React Router Documentation
+
+These resources were instrumental in understanding how to manage state, side effects, global data, and routing effectively.
+
+## Reflection
+This project was both challenging and rewarding. Breaking the app down into smaller parts — such as building custom hooks first, setting up the context for favorites, then creating individual pages and components — made the complexity manageable. At times, it was easy to feel overwhelmed by all the requirements and moving pieces, but tackling each feature step-by-step helped me maintain progress without getting lost.
+
+I gained a deeper understanding of advanced React concepts like custom hooks and context, and how to architect a scalable SPA with dynamic routing and persistent state. This hands-on experience reinforced best practices and improved my confidence in building real-world React applications.
