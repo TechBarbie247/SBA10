@@ -5,7 +5,7 @@ import RecipeDetail from "./pages/RecipeDetail";
 import Favorites from "./pages/Favorites";
 import SearchResults from "./pages/SearchResults";
 import Navbar from "./components/Navbar";
-import { FavoritesProvider } from "./hooks/FavoritesContext";
+import { FavoritesProvider } from "./context/FavoritesContext";
 
 export default function App() {
   return (
