@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { useLocalStorage } from "./useLocalStorage";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 const FavoritesContext = createContext();
 
@@ -7,19 +7,19 @@ export function FavoritesProvider({ children }) {
   const [favorites, setFavorites] = useLocalStorage("favorites", []);
 
   const addFavorite = (id) => {
-    setFavorites((prev) => [...new Set([...prev, id])]);
+    if (!favorites.includes(id)) {
+      setFavorites([...favorites, id]);
+    }
   };
 
   const removeFavorite = (id) => {
-    setFavorites((prev) => prev.filter((fav) => fav !== id));
+    setFavorites(favorites.filter((fav) => fav !== id));
   };
 
   const isFavorite = (id) => favorites.includes(id);
 
   return (
-    <FavoritesContext.Provider
-      value={{ favorites, addFavorite, removeFavorite, isFavorite }}
-    >
+    <FavoritesContext.Provider value={{ favorites, addFavorite, removeFavorite, isFavorite }}>
       {children}
     </FavoritesContext.Provider>
   );
