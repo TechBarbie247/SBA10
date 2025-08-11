@@ -10,7 +10,9 @@ import { FavoritesProvider } from "./hooks/FavoritesContext";
 export default function App() {
   return (
     <FavoritesProvider>
+      <div className="app">
       <Navbar />
+      <main className="main-content">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/category/:categoryName" element={<Category />} />
@@ -18,6 +20,8 @@ export default function App() {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/search" element={<SearchResults />} />
       </Routes>
+      </main>
+      </div>
     </FavoritesProvider>
   );
 }
