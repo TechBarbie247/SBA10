@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useFavorites } from "../hooks/FavoritesContext";
+import { useFavorites } from "../context/FavoritesContext";
 import { useFetch } from "../hooks/useFetch";
 
 export default function Favorites() {
